@@ -1,0 +1,10 @@
+resources:
+  jobs:
+    demo_job:
+      name: Demo_job
+      tasks:
+        - task_key: Demo_task
+          existing_cluster_id: 0901-080348-f3467t0y
+          notebook_task:
+            notebook_path: ../notebooks/00_landing/tmp.ipynb
+  
