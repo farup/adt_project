@@ -1,4 +1,6 @@
-from databricks.connect import DatabricksSession
-spark = DatabricksSession.builder.getOrCreate()
+from pyspark.sql import SparkSession
 
-spark.sql("SELECT 1").show()
+
+
+spark = SparkSession.builder.getOrCreate()
+print(spark.range(5).collect())
