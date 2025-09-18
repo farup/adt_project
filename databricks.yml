@@ -28,7 +28,7 @@ targets:
     workspace:
       host: https://adb-475772394194112.12.azuredatabricks.net
 
-  adt_test:
+  test:
     mode: production
     workspace:
       host: https://adb-3219440406780807.7.azuredatabricks.net
