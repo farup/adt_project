@@ -1,0 +1,46 @@
+name: CI Workflow
+
+
+on:
+  push:
+    branches: 
+      - 'feature/*'
+    
+  pull_request:
+    branches:
+      - 'main'
+
+
+jobs:
+  ci_job:
+    name: CI Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with :
+          python-version: '3.12.3'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: List repo contents
+        run: |
+          pwd
+          ls -R
+
+      - name: Run pytest & generate HTML report
+        run: |
+          pytest --disable-warnings --cov=./src --cov-report=html tests/
+
+      - name: Upload coverage HTML
+        uses: actions/upload-artifact@v4
+        with: 
+          name: covarge-html
+          path: htmlcov
+    
