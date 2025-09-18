@@ -6,7 +6,6 @@ resources:
         - task_key: Demo_task
           new_cluster:
           # Use cluster spec by resource name
-            cluster_name: "FARUP Terje Job Cluster ${bundle.target}"
             spark_version: "16.4.x-scala2.12"
             node_type_id: "Standard_D4s_v3"
             autotermination_minutes: 60
