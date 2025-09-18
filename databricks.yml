@@ -35,5 +35,3 @@ targets:
     permissions:
       - user_name: terje.farup@soprasteria.com
         level: CAN_MANAGE
-      - group_name: users
-        level: CAN_MANAGE
