@@ -28,10 +28,10 @@ targets:
     workspace:
       host: https://adb-475772394194112.12.azuredatabricks.net
 
-  test:
+  adt_test:
     mode: production
     workspace:
-      host: https://adb-3053831605155774.14.azuredatabricks.net
+      host: https://adb-3219440406780807.7.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/terje.farup@soprasteria.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     permissions:
