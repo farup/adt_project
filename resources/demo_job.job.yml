@@ -16,7 +16,6 @@ resources:
               max_workers: 1
             azure_attributes:
               availability: "ON_DEMAND_AZURE"
-            policy_id: "000CF254B743BF80"
 
           notebook_task:
             notebook_path: ../notebooks/00_landing/tmp.ipynb
