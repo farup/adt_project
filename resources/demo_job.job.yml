@@ -4,7 +4,20 @@ resources:
       name: Demo_job
       tasks:
         - task_key: Demo_task
-          existing_cluster_id: 0901-080348-f3467t0y
+          new_cluster:
+          # Use cluster spec by resource name
+            cluster_name: "FARUP Terje Job Cluster ${bundle.target}"
+            spark_version: "16.4.x-scala2.12"
+            node_type_id: "Standard_D4s_v3"
+            autotermination_minutes: 60
+            is_single_node: false
+            autoscale:
+              min_workers: 1
+              max_workers: 1
+            azure_attributes:
+              availability: "ON_DEMAND_AZURE"
+            policy_id: "000CF254B743BF80"
+
           notebook_task:
             notebook_path: ../notebooks/00_landing/tmp.ipynb
   
