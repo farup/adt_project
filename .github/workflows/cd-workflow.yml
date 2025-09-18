@@ -5,17 +5,14 @@ on:
     branches: 
       - 'main'
 
-
 jobs:
   cd-deploy-test: 
     name: Deploy to tests
     runs-on: ubuntu-latest
     environment: 
-      name: TEST_ADT
-      url: ${{ secrets.TEST_ADT_URL
+      name: adt_test
 
-    steps:
-      
+    steps:     
     - name: Checkout repository
       uses: actions/checkout@v4
 
