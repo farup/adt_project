@@ -2,8 +2,6 @@ import datetime
 
 from pyspark.sql import SparkSession
 
-
-
 def test_time_duration(spark): 
 
     data = [

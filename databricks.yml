@@ -15,8 +15,6 @@ sync:
     - .git/**
     - __pycache__/**
 
-
-
 targets:
   dev:
     # The default target uses 'mode: development' to create a development copy.

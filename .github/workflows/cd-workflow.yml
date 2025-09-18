@@ -33,7 +33,7 @@ jobs:
       run: |
         # write out the profile (here called "ADT_TEST")
         cat <<EOF > ~/.databrickscfg
-        [ADT_TEST]
+        [TEST]
         host = https://adb-3219440406780807.7.azuredatabricks.net
         azure_tenant_id = ${{secrets.AZURE_TENANT_ID }}
         azure_client_id = ${{secrets.AZURE_CLIENT_ID }}
@@ -44,4 +44,4 @@ jobs:
       run: |
         databricks bundle deploy \
           --target test \
-          --profile test
+          --profile TEST
